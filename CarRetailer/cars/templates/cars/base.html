@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Car Retailer</title>
+</head>
+<body>
+    {% for brand in brands %}
+        <a href="{% url 'home-model' brand.slug %}">{{brand.brand_name}}</a>
+    {% endfor %}
+</body>
