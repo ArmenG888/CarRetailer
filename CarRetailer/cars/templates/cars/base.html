@@ -2,10 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="/static/main.css">
     <title>Car Retailer</title>
 </head>
 <body>
-    {% for brand in brands %}
-        <a href="{% url 'home-model' brand.slug %}">{{brand.brand_name}}</a>
+    <h1> Popular Cars For Sale </h1>
+    {% for brand in cars %}
+        {% for car in brand.cars_to_brand.all%}
+
+            <div class="car-image-div">
+                <h1>{{brand.brand_name}} {{car.model_name}}</h1>
+                <img class="car-image" src="{{car.image.url}}">
+                <h2>${{car.price}} {{car.mileage}} Miles</h2>
+            </div>
+        {% endfor %}
     {% endfor %}
 </body>

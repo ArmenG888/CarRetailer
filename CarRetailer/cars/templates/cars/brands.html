@@ -1,0 +1,9 @@
+{% include 'cars/base.html' %}
+{% block content %}
+{% for brand in brands %}
+        <div class="brand-image">
+        <a href="{% url 'home-model' brand.slug %}">
+            <img src="{{brand.brand_logo.url}}">
+        </a></div>
+{% endfor %}
+{% endblock content%}

@@ -1,0 +1,36 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap");
+
+:root {
+    --white-color: #F7F6FB;
+    --body-font: 'Nunito', sans-serif;
+}
+
+
+body {
+    position: relative;
+    margin: var(--header-height) 0 0 0;
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+}
+
+.brand-image{
+    margin: 2rem;
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: auto;
+    width: auto;
+}
+.car-image-div{
+    margin: 2rem;
+    display: inline-block;
+    border-width:1px; 
+    border-style:outset;
+    text-decoration: none;
+    color: inherit;
+}
+.car-image{
+    height: 200px;
+    width: auto;
+    text-decoration: none;
+}
